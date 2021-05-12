@@ -7,6 +7,18 @@ namespace AppTest
     public class ProgramTests
     {
         [Fact]
+        public void ConvertToTitleCase_Null()
+        {
+            // Given
+            String testStr = null;
+
+            // When
+            Action action = () => Program.ConvertToTitleCase(testStr);
+
+            // Then
+            Assert.Throws<Exception>(action);
+        }
+        [Fact]
         public void ConvertToTitleCase_Simple()
         {
             // Given
